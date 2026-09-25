@@ -5,7 +5,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 part 'counter_state.dart';
 
 class CounterCubit extends Cubit<CounterState> {
-  CounterCubit() : super(CounterInitial());
+  CounterCubit() : super(CounterInitial()){
+    loadData();
+  }
 
   int scoreA = 0, scoreB = 0;
 
